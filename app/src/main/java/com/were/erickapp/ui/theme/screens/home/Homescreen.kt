@@ -29,6 +29,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.were.erickapp.R
 import com.were.erickapp.navigation.ROUTE_LOGIN
+import com.were.erickapp.navigation.ROUTE_MYAPP
 import com.were.erickapp.navigation.ROUTE_REGISTER
 import com.were.erickapp.ui.theme.Mynewcolor
 
@@ -76,7 +77,9 @@ fun Home_Screen(navController:NavHostController) {
                 fontFamily = FontFamily.Cursive
             )
         }
-        Button(onClick = {},
+        Button(onClick = {
+            navController.navigate(ROUTE_MYAPP)
+        },
             colors = ButtonDefaults.buttonColors(Mynewcolor),
             modifier = Modifier.width(300.dp)) {
             Text("My App",

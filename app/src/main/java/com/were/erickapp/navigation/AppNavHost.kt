@@ -6,9 +6,13 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.were.erickapp.ui.theme.screens.calculator.Calculator_screen
+import com.were.erickapp.ui.theme.screens.dashboard.DashboardScreen
 import com.were.erickapp.ui.theme.screens.home.Home_Screen
+import com.were.erickapp.ui.theme.screens.intent.Intent_Screen
 import com.were.erickapp.ui.theme.screens.login.Login_Screen
 import com.were.erickapp.ui.theme.screens.myapp.My_app_screen
+import com.were.erickapp.ui.theme.screens.myscreen.My_Screen
 import com.were.erickapp.ui.theme.screens.register.Register_Screen
 import com.were.erickapp.ui.theme.screens.splash.Splash_Screen
 
@@ -36,6 +40,21 @@ fun AppNavHost(modifier: Modifier = Modifier,
         composable(ROUTE_MYAPP){
             My_app_screen(navController)
         }
+        composable(ROUTE_CALC){
+            Calculator_screen(navController)
+
+        }
+        composable(ROUTE_INTENT){
+            Intent_Screen(navController)
+        }
+        composable(ROUTE_DASHBOARD){
+            DashboardScreen(navController)
+        }
+        composable(ROUTE_MYSCREEN){
+            My_Screen(navController)
+
+        }
+
 
 
     }

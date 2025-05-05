@@ -21,6 +21,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.were.erickapp.R
+import com.were.erickapp.navigation.ROUTE_CALC
+import com.were.erickapp.navigation.ROUTE_INTENT
 import com.were.erickapp.ui.theme.Mynewcolor
 
 @Composable
@@ -34,7 +36,7 @@ fun My_app_screen(navController:NavHostController) {
         Image(painterResource(id = R.drawable.myapp),
             contentDescription = "myimage")
 
-        Button(onClick = {},
+        Button(onClick = {navController.navigate(ROUTE_INTENT)},
             colors = ButtonDefaults.buttonColors(Mynewcolor),
             modifier = Modifier.width(300.dp)) {
             Text("Intent",
@@ -44,7 +46,7 @@ fun My_app_screen(navController:NavHostController) {
             )
 
         }
-        Button(onClick = {},
+        Button(onClick = {navController.navigate(ROUTE_CALC)},
             colors = ButtonDefaults.buttonColors(Mynewcolor),
             modifier = Modifier.width(300.dp)) {
             Text("Calculator",
